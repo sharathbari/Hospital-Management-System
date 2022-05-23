@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hospital Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg bg-success p-3">
+  <div class="container-fluid">
+<img class="bd-placeholder-img mx-3" src="https://th.bing.com/th/id/OIP.X26N6_pDVMLPU2fvdZ74zQHaDg?w=303&h=165&c=7&r=0&o=5&dpr=1.25&pid=1.7" height="70" width="80">
+    <a class="navbar-brand" href="#"> <strong class="d-inline-block mb-2 text-light">MediCare</strong></a>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"><strong class="d-inline-block mb-2 text-light">Home</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html"><strong class="d-inline-block mb-2 text-light">About</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html"><strong class="d-inline-block mb-2 text-light">Contact Us</strong></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <strong class="d-inline-block mb-2 text-light">Services</strong>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Slot Booking</a></li>
+            
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        
+      </ul>
+     <button type="button" class="btn btn-danger p-3 " data-bs-toggle="modal" data-bs-target="#LoginModal">Login</button>
+<button type="button" class="btn btn-primary p-3" data-bs-toggle="modal" data-bs-target="#RegisterModal">Register</button>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Modal -->
+<div class="modal fade" id="RegisterModal" tabindex="-1" aria-labelledby="RegisterModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="RegisterModalLabel">Sign up</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-5">
+      <div class="col-md-5 col-lg-4 order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          
+
+        
+      </div>
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Enter Your Details</h4>
+        <form class="needs-validation" novalidate="">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">First name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
+
+       
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label">Address</label>
+              <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
+              <div class="invalid-feedback">
+                Please enter your shipping address.
+              </div>
+            </div>
+
+ 
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">Country</label>
+              <select class="form-select" id="country" required="">
+                <option value="">Choose...</option>
+                <option>United States</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid country.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="state" class="form-label">State</label>
+              <select class="form-select" id="state" required="">
+                <option value="">Choose...</option>
+                <option>California</option>
+              </select>
+              <div class="invalid-feedback">
+                Please provide a valid state.
+              </div>
+            </div>
+              <br>
+<div>
+<label for="DOB" class="form-label">DOB</label><br>
+<input type="date" name="date of birth"><br>
+</div>
+            <div class="col-8">
+              <label for="Mobile number" class="form-label">Mobile number</label>
+              <input type="text" class="form-control" id="Mobile number" placeholder="8309324502" required="">
+              <div class="invalid-feedback">
+              *
+              </div>
+            </div>
+          </div>
+
+  <br><br>
+
+          <button class="w-100 btn btn-primary btn-lg" type="submit">Sign In</button>
+        </form>
+      </div>
+    </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="LoginModalLabel">Sign in</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Welcome to MediCare</strong> You should check in on some of those fields below.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://source.unsplash.com/800x300/?hospital,doctor" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>  Direct Interaction with Best Doctors All over the world.</h5>
+        <p>  <div class="mb-1 text-muted">24/7 Available</div></p>
+         <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-danger">Secondary</button>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://source.unsplash.com/800x300/?hospital,nurse" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>  Online Appointment slot booking.</h5>
+        <p> <strong class="d-inline-block mb-2 text-secondary">No more waiting in queues.</strong></p>
+         <button type="button" class="btn btn-info">Primary</button>
+       <button type="button" class="btn btn-light">Secondary</button>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://source.unsplash.com/800x300/?hospital,medical equipment" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>  Register and Enjoy the Services</h5>
+        <p>  <div class="mb-1 text-muted">24/7 services</div></p>
+    <button type="button" class="btn btn-primary p-3">Primary</button>
+    <button type="button" class="btn btn-danger p-3">Secondary</button>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="container my-4">
+<div class="row mb-2">
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">Services</strong>
+          <h3 class="mb-0">Accessible 24/7</h3>
+          <div class="mb-1 text-muted">Nov 12</div>
+          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+        
+        </div>
+        <div class="col-auto d-none d-lg-block">
+         <img class="bd-placeholder-img" width="200" height="250" src="https://source.unsplash.com/400x400/?hospital,medical equipment" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-success">Economy</strong>
+          <h3 class="mb-0">Free of Cost</h3>
+          
+          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          
+        </div>
+        <div class="col-auto d-none d-lg-block">
+           <img class="bd-placeholder-img" width="200" height="250" src="https://source.unsplash.com/400x400/?hospital,medicines" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="#navbarSupportedContent" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+      <li class="nav-item"><a href="about.html" class="nav-link px-2 text-muted">About</a></li>
+    </ul>
+    <p class="text-center text-muted">© 2022 Company, Inc</p>
+  </footer>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

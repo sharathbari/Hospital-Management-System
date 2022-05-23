@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hospital Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg bg-success p-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"> <strong class="d-inline-block mb-2 text-light">MedCare</strong></a>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index1.html"><strong class="d-inline-block mb-2 text-light">Home</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html"><strong class="d-inline-block mb-2 text-light">About</strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html"><strong class="d-inline-block mb-2 text-light">Contact Us</strong></a>
+        </li>
+         
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <strong class="d-inline-block mb-2 text-light">Services</strong>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Slot Booking</a></li>
+            
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        
+      </ul>
+     <button type="button" class="btn btn-danger p-3 " data-bs-toggle="modal" data-bs-target="#LoginModal">Login</button>
+<button type="button" class="btn btn-primary p-3" data-bs-toggle="modal" data-bs-target="#RegisterModal">Register</button>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Modal -->
+<div class="modal fade" id="RegisterModal" tabindex="-1" aria-labelledby="RegisterModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="RegisterModalLabel">Sign up</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-5">
+      <div class="col-md-5 col-lg-4 order-md-last">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          
+
+        
+      </div>
+      <div class="col-md-7 col-lg-8">
+        <h4 class="mb-3">Enter Your Details</h4>
+        <form class="needs-validation" novalidate="">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="firstName" class="form-label">First name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <label for="lastName" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
+
+       
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="address" class="form-label">Address</label>
+              <input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
+              <div class="invalid-feedback">
+                Please enter your shipping address.
+              </div>
+            </div>
+
+ 
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">Country</label>
+              <select class="form-select" id="country" required="">
+                <option value="">Choose...</option>
+                <option>United States</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid country.
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <label for="state" class="form-label">State</label>
+              <select class="form-select" id="state" required="">
+                <option value="">Choose...</option>
+                <option>California</option>
+              </select>
+              <div class="invalid-feedback">
+                Please provide a valid state.
+              </div>
+            </div>
+              <br>
+<div>
+<label for="DOB" class="form-label">DOB</label><br>
+<input type="date" name="date of birth"><br>
+</div>
+            <div class="col-8">
+              <label for="Mobile number" class="form-label">Mobile number</label>
+              <input type="text" class="form-control" id="Mobile number" placeholder="8309324502" required="">
+              <div class="invalid-feedback">
+              *
+              </div>
+            </div>
+          </div>
+
+  <br><br>
+
+          <button class="w-100 btn btn-primary btn-lg" type="submit">Sign In</button>
+        </form>
+      </div>
+    </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="LoginModalLabel">Sign in</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+       <form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  </div>
+</div>
+<div class="container my-3">
+<div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">We are dedicated to the innovation and development of solutions for healthcare sector.</h2>
+        <p ><span class="text-muted">We connect people, information and processes. Our solutions are characterized by their easy integration, their great adaptability and their total freedom of deployment.</span></p>
+      </div>
+      <div class="col-md-5">
+    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="400" height="400"  src="https://source.unsplash.com/400x400/?  foreign student,dedication" alt="">
+      </div>
+</div>
+    </div>
+<div class="container d-flex justify-content-center align-items-center">
+<div class="row my-3">
+      <div class="col-lg-4">
+       <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://source.unsplash.com/140x140/?innovation,hospital" alt="">
+        <h2 class="fw-normal">Innovation</h2>
+        <p>We are at the forefront of technology and we adapt to market changes, meeting customer requirements.</p>
+        
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://source.unsplash.com/140x140/?trust,hospital" alt="">
+        <h2 class="fw-normal">Trust</h2>
+        <p>We have a wide portfolio of loyal customers thanks to the solutions raised to the needs that arise.</p>
+        
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://source.unsplash.com/140x140/?experience,hospital" alt="">
+        <h2 class="fw-normal">Experience</h2>
+        <p>Team made up of professionals with many years of experience, to which new talents are being incorporated with renewed and innovative ideas.</p>
+        
+      </div><!-- /.col-lg-4 -->
+<div class="col-lg-4">
+        <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="https://source.unsplash.com/140x140/?Teamwork,doctors" alt="">
+        <h2 class="fw-normal">Teamwork</h2>
+        <p> We value and encourage the contributions of each person to achieve business objectives.</p>
+        
+      </div><!-- /.col-lg-4 -->
+    </div>
+</div>
+<div class="container">
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="index1.html" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+    </ul>
+    <p class="text-center text-muted">© 2022 Company, Inc</p>
+  </footer>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
+
+
+
+
+   
